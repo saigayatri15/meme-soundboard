@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoundBoard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .carved-region {
+            background-color: #f8f9fa !important;
+            border: 1px solid #e2e8f0;
+            box-shadow: 
+                inset 3px 3px 6px rgba(0, 0, 0, 0.06), 
+                inset -3px -3px 6px rgba(255, 255, 255, 0.9);
+                
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .sound-btn {
+            border: none !important;
+            border-radius: 8px !important;
+            padding: 1.25rem 0.5rem !important;
+            box-shadow: 
+                0 4px 0px rgba(0, 0, 0, 0.15), 
+                0 6px 10px rgba(0, 0, 0, 0.1);
+                
+            transition: all 0.05s ease-in-out;
+        }
+
+        
+        .sound-btn:active {
+            transform: translateY(3px);
+            box-shadow: 
+                0 1px 0px rgba(0, 0, 0, 0.15), 
+                0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card{
+            border: none;
+        }
+
+        #stop{
+            width: 80%;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Meme Soundboard</h1>
+
+        <div class="card p-4 shadow-sm bg-secondary-subtle">
+            <div class = "carved-region rounded p-4 shadow">
+                <h4 class="mb-4">Controls</h4>
+
+                <div id="controls" class="row">
+
+                    <div class="col-md-9 d-flex flex-column mb-3 align-items-start justify-content-center">
+
+                        <label for="volume" class="form-label fw-bold">Volume: <span id="volumeValue">100%</span></label>
+                        <input type="range" class="w-100" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+
+                    </div>
+
+                    <div class="col-md-3 d-flex align-items-center justify-content-center">
+                        <button class="btn btn-danger fw-bold" id="stop">Stop All</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container my-5 rounded p-4 shadow carved-region">
+                <div class="row g-2">
+
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-success fw-bold w-100 sound-btn" data-sound="aayein-meme.mp3">Aayein</button>
+                    </div>
+
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-success fw-bold w-100 sound-btn" data-sound="among-us-role-reveal-sound.mp3">Among Us Role Reveal</button>
+                    </div>
+
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-success fw-bold w-100 sound-btn" data-sound="baby-laughing-meme.mp3">Baby Laughing</button>
+                    </div>
+
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-success fw-bold w-100 sound-btn" data-sound="bruh.mp3">Bruh</button>
+                    </div>
+
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-success fw-bold w-100 sound-btn" data-sound="cooked-dog-meme.mp3">Cooked</button>
+                    </div>
+
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-success fw-bold w-100 sound-btn" data-sound="directed-by-robert-brown.mp3">Directed by Robert B. Weide</button>
+                    </div>
+
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-success fw-bold w-100 sound-btn" data-sound="dun-dun-dun-sound-effect-brass_8nFBccR.mp3">Dun Dun Dunnnnnn</button>
+                    </div>
+
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-success fw-bold w-100 sound-btn" data-sound="faaah.mp3">FAAAH</button>
+                    </div>
+
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-success fw-bold w-100 sound-btn" data-sound="galaxy-brain-meme.mp3">Galaxy Brain</button>
+                    </div>
+
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-success fw-bold w-100 sound-btn" data-sound="huh.mp3">Huh</button>
+                    </div>
+
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-success fw-bold w-100 sound-btn" data-sound="iluminati.mp3">Illuminati</button>
+                    </div>
+
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-success fw-bold w-100 sound-btn" data-sound="ocean-meme.mp3">Deep Thoughts</button>
+                    </div>
+
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-success fw-bold w-100 sound-btn" data-sound="oh-my-god-meme.mp3">Oh My God</button>
+                    </div>
+
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-success fw-bold w-100 sound-btn" data-sound="sad-violin-theme.mp3">Sad Violin Theme</button>
+                    </div>
+
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-success fw-bold w-100 sound-btn" data-sound="snoopdog.mp3">Snoop Dog</button>
+                    </div>
+
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-success fw-bold w-100 sound-btn" data-sound="spiderman-meme-song.mp3">Spiderman</button>
+                    </div>
+
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-success fw-bold w-100 sound-btn" data-sound="suspicious.mp3">Suspicious</button>
+                    </div>
+
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-success fw-bold w-100 sound-btn" data-sound="vine-boom-thud.mp3">Vine Boom</button>
+                    </div>
+
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-success fw-bold w-100 sound-btn" data-sound="wide-putin.mp3">Wide Putin</button>
+                    </div>
+
+                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-success fw-bold w-100 sound-btn" data-sound="wow-anime-voice-accent.mp3">Waoooow</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // slider no. logic
+        const volumeSlider = document.getElementById('volumeSlider');
+        const volumeValue = document.getElementById('volumeValue');
+        volumeSlider.addEventListener('input', function(event){
+            volumeValue.innerText = Number((event.target.value*100).toFixed(2)) + '%';
+        });
+
+        // no. of active audios
+        let activeAudios = [];
+
+        //playSound()
+        function playSound(soundFile){
+            const audio = new Audio(`normalized/${soundFile}`);
+            audio.volume = volumeSlider.value;
+            console.log(audio.volume);
+            audio.play();
+            activeAudios.push(audio);
+            audio.onended = () => {
+                activeAudios = activeAudios.filter(sound => sound!== audio);
+            }
+        }
+
+        // add event listener for each sound-btn
+        const audioButtons = document.querySelectorAll('.sound-btn');
+        audioButtons.forEach(button => {
+            button.addEventListener('click', function(event){
+                const audioTrack = event.target.getAttribute('data-sound');
+                playSound(audioTrack);
+            })
+        })
+
+        //stop all logic
+        const stopButton = document.getElementById('stop');
+        stopButton.addEventListener('click', function(event){
+            activeAudios.forEach(audio => {
+                audio.pause();
+                audio.currentTime = 0;
+                activeAudios = [];
+            })
+        })
+
+        const holiColors = [
+            '#c70039', // Rich Gulal Red
+            '#1f77b4', // Deep Sky Blue
+            '#2ca02c', // Festive Leaf Green
+            '#9467bd', // Royal Orchid Purple
+            '#d62728', // Crimson Powder
+            '#ff4500', // Deep Saffron Orange
+            '#bcbd22', // Dark Mustard/Marigold Gold
+            '#17becf', // Rich Turquoise Cyan
+            '#e377c2', // Deep Magenta Pink
+            '#8c564b', // Earthy Terracotta
+            '#008080', // Deep Teal
+            '#4b0082', // Indigo Powder
+            '#228b22', // Forest Mehendi Green
+            '#b8860b', // Dark Goldenrod
+            '#ff1493', // Deep Deep Pink
+            '#4682b4', // Steel Blue
+            '#d81b60', // Vibrant Ruby Rose
+            '#006400', // Dark Festive Green
+            '#a52a2a', // Auburn Saffron
+            '#7b1fa2'  // Vibrant Grape Purple
+        ];
+
+        count = 0;
+        audioButtons.forEach(button => {
+            button.classList.remove('btn-success');
+            button.style.color = 'white';
+            button.style.backgroundColor = holiColors[count];
+            count++;
+        })
+    </script>
+</body>
+</html>
